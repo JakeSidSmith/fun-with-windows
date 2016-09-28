@@ -1,2 +1,2 @@
-# fun-with-windows
+# Fun with Windows
 Messing around with browser window manipulation
