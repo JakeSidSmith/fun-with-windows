@@ -80,7 +80,7 @@
     initialized = true;
 
     openWindows();
-    windowInterval = setInterval(moveWindows, 1000 / 60);
+    windowInterval = setInterval(moveWindows, 1000 / 30);
   }
 
   function onClick () {
