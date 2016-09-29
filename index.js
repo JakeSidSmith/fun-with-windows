@@ -3,7 +3,7 @@
 (function () {
 
   var windowInterval;
-  var numberOfWindows = 10;
+  var numberOfWindows = 1;
   var windows = [];
   var width = 150;
   var height = 100;
@@ -48,6 +48,8 @@
   }
 
   function moveWindows () {
+    var windowsToAdd = [];
+
     for (var i = 0; i < windows.length; i += 1) {
       var win = windows[i];
 
@@ -55,8 +57,10 @@
 
         if (win.screenX + win.velX <= 50 || win.screenX + win.velX + width >= screen.width - 50) {
           win.velX *= -1;
+          windowsToAdd.push(openWindow());
         } else if (win.screenY + win.velY <= 50 || win.screenY + win.velY + height >= screen.height - 50) {
           win.velY *= -1;
+          windowsToAdd.push(openWindow());
         }
 
         win.moveBy(win.velX, win.velY);
@@ -68,6 +72,8 @@
       }
 
     }
+
+    windows = windows.concat(windowsToAdd);
   }
 
   function init () {
