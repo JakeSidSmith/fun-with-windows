@@ -3,12 +3,68 @@
 <head>
   <meta charset="utf-8">
   <title>Fun with Windows</title>
+  <style type="text/css" media="screen">
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: arial, helvetica, sans-serif;
+      font-size: 14px;
+      color: #333;
+    }
+
+    p {
+      margin: 10px auto;
+    }
+
+    button {
+      display: inline-block;
+      margin: 0;
+      padding: 5px 10px;
+      border-radius: 2px;
+      background-color: #eee;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+
+    button:hover {
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+      box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .center {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: table;
+    }
+
+    .center div {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
-  <button onclick="onClick()">
-    Click me!
-  </button>
+  <div class="center">
+    <div>
+      <button onclick="onClick()">
+        Do not click me!
+      </button>
+      <p>
+        You have been warned!
+      </p>
+    </div>
+  </div>
 
   <script type="text/javascript" src="index.js"></script>
 
